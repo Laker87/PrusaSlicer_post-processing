@@ -29,7 +29,7 @@ with open(sourceFile, "w") as of:
     for index in range(len(lines)):
         line = lines[index]
         if line.startswith('START_PRINT'):
-            line = line.replace('EXTRUDERS=0', 'EXTRUDERS=' + str(toolchanges))
+            line = line.replace('TOOLCHANGES=0', 'TOOLCHANGES=' + str(toolchanges))
             of.write(line)
         else:
             of.write(line)
